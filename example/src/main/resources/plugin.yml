@@ -1,0 +1,9 @@
+name: Menu
+version: '0.1'
+main: me.splitque.Main
+api-version: '1.18'
+commands:
+  entityinit: {}
+  entityinvinit: {}
+  entitydespawn: {}
+  entityinvdespawn: {}

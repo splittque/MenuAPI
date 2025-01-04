@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+configurations {
+    libToJar
+}
+
+repositories {
+    mavenCentral()
+    maven { url = "https://repo.papermc.io/repository/maven-public/" }
+    maven { url = "https://oss.sonatype.org/content/groups/public/" }
+}
+
+dependencies {
+    compileOnly "io.papermc.paper:paper-api:1.18.2-R0.1-SNAPSHOT"
+    compileOnly fileTree(dir: 'libs', include: '*.jar')
+    libToJar fileTree(dir: 'libs', include: '*.jar')
+}
+
+jar {
+    from {
+        configurations.libToJar.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+}
