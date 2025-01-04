@@ -43,7 +43,7 @@ Done!
 
 ---
 
-You can found example of using this api here.
+You can found example of using this api [here](https://github.com/splittque/MenuAPI/tree/main/example/src/main/java/me/splitque).
 
 ### Build
 
